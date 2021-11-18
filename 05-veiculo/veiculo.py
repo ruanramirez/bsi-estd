@@ -23,11 +23,12 @@
 # - imprimeFinalPlaca() - Retorna o algarismo final da placa deste veículo.
 
 class Veiculo:
-	placa = 'sem placa'
-	marca = 'sem marca'
-	modelo = 'sem modelo'
-	ano = -1
-	cod = -1
+	def __init__(self, placa, marca, modelo, ano, cod):
+		self.placa = placa
+		self.marca = marca
+		self.modelo = modelo
+		self.ano = ano
+		self.cod = cod
 
 	def imprimeVeiculo(self):
 		return f"Placa: {self.placa}, Marca: {self.marca}, Modelo: {self.modelo}, Ano: {self.ano}, Código: {self.cod}."
@@ -35,19 +36,22 @@ class Veiculo:
 	def imprimeFinalPlaca(self):
 		return self.placa[-1]
 
-primeiro_veiculo = Veiculo()
-primeiro_veiculo.placa = 'ASB4232'
-primeiro_veiculo.marca = 'Toyota'
-primeiro_veiculo.modelo = 'AB-1'
-primeiro_veiculo.ano = 2018
-primeiro_veiculo.cod = 41455
+primeiro_veiculo = Veiculo('ASB4232', 'Toyota', 'AB-1', 2018, 41455)
+segundo_veiculo = Veiculo('TTB3141', 'Honda', 'GX-1', 2017, 12145)
 
-segundo_veiculo = Veiculo()
-segundo_veiculo.placa = 'TTB3141'
-segundo_veiculo.marca = 'Honda'
-segundo_veiculo.modelo = 'GX-1'
-segundo_veiculo.ano = 2017
-segundo_veiculo.cod = 12145
+lista_veiculos = []
+
+def inserir(veiculo):
+	if veiculo != None:
+		lista_veiculos.append(veiculo)
+
+def mostrarLista(lista):
+	for x in lista:
+		return x
+
+def removerVeiculo(placa):
+	print(placa)
+
 
 print(primeiro_veiculo.imprimeVeiculo())
 print(primeiro_veiculo.imprimeFinalPlaca())
@@ -55,8 +59,6 @@ print(primeiro_veiculo.imprimeFinalPlaca())
 print(segundo_veiculo.imprimeVeiculo())
 print(segundo_veiculo.imprimeFinalPlaca())
 
-lista_veiculos = []
-lista_veiculos.append(primeiro_veiculo)
-lista_veiculos.append(segundo_veiculo)
+inserir(primeiro_veiculo)
+print(mostrarLista(lista_veiculos))
 
-print(lista_veiculos[0], lista_veiculos[1])
