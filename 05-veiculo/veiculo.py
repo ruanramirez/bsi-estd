@@ -23,14 +23,20 @@
 # - imprimeFinalPlaca() - Retorna o algarismo final da placa deste veículo.
 
 class Veiculo:
-	placa = 'sem cor'
+	placa = 'sem placa'
 	marca = 'sem marca'
 	modelo = 'sem modelo'
 	ano = -1
-	cod = 'sem código'
+	cod = -1
 
 	def imprimeVeiculo(self):
-		print(self.placa)
+		print(f"Placa: {self.placa}, Marca: {self.marca}, Modelo: {self.modelo}, Ano: {self.ano}, Código: {self.cod}.")
 
 	def imprimeFinalPlaca(self):
-		print(self.placa)
+		print(self.placa[-1])
+
+primeiro_veiculo = Veiculo()
+
+
+print(primeiro_veiculo.imprimeFinalPlaca())
+print(primeiro_veiculo.imprimeVeiculo())
