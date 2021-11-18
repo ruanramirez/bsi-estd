@@ -30,13 +30,33 @@ class Veiculo:
 	cod = -1
 
 	def imprimeVeiculo(self):
-		print(f"Placa: {self.placa}, Marca: {self.marca}, Modelo: {self.modelo}, Ano: {self.ano}, Código: {self.cod}.")
+		return f"Placa: {self.placa}, Marca: {self.marca}, Modelo: {self.modelo}, Ano: {self.ano}, Código: {self.cod}."
 
 	def imprimeFinalPlaca(self):
-		print(self.placa[-1])
+		return self.placa[-1]
 
 primeiro_veiculo = Veiculo()
+primeiro_veiculo.placa = 'ASB4232'
+primeiro_veiculo.marca = 'Toyota'
+primeiro_veiculo.modelo = 'AB-1'
+primeiro_veiculo.ano = 2018
+primeiro_veiculo.cod = 41455
 
+segundo_veiculo = Veiculo()
+segundo_veiculo.placa = 'TTB3141'
+segundo_veiculo.marca = 'Honda'
+segundo_veiculo.modelo = 'GX-1'
+segundo_veiculo.ano = 2017
+segundo_veiculo.cod = 12145
 
-print(primeiro_veiculo.imprimeFinalPlaca())
 print(primeiro_veiculo.imprimeVeiculo())
+print(primeiro_veiculo.imprimeFinalPlaca())
+
+print(segundo_veiculo.imprimeVeiculo())
+print(segundo_veiculo.imprimeFinalPlaca())
+
+lista_veiculos = []
+lista_veiculos.append(primeiro_veiculo)
+lista_veiculos.append(segundo_veiculo)
+
+print(lista_veiculos[0], lista_veiculos[1])
