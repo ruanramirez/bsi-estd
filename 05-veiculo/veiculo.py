@@ -21,3 +21,16 @@
 # - imprimeVeiculo() - Escreve os dados do Veiculo na saída padrão
 
 # - imprimeFinalPlaca() - Retorna o algarismo final da placa deste veículo.
+
+class Veiculo:
+	placa = 'sem cor'
+	marca = 'sem marca'
+	modelo = 'sem modelo'
+	ano = -1
+	cod = 'sem código'
+
+	def imprimeVeiculo(self):
+		print(self.placa)
+
+	def imprimeFinalPlaca(self):
+		print(self.placa)
