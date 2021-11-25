@@ -18,10 +18,21 @@ class Stack:
 		while not self.isEmpty():
 			return self.popAll()
 
+	def invertList(self):
+		stack = Stack()
+		newStack = Stack()
+		for item in self.items:
+			stack.push(item)
+		while not stack.isEmpty():
+			newStack.push(stack.pop())
+		return newStack.items
+
 
 pilha = Stack()
 pilha.push(1)
 pilha.push(2)
 pilha.push(3)
+pilha.invertList()
 
 print(pilha.items)
+print(pilha.invertList())
