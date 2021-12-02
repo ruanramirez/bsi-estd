@@ -17,3 +17,16 @@ class FilaArray:
 		if self._tamanho == FilaArray.CAPACIDADE_PADRAO:
 			raise FilaCheia('A Fila está cheia.')
 		return self._dados[self._inicio]
+
+	def rodar(self, cargo):
+		no = No(cargo)
+		no.proximo = None
+		if self._inicio == 0:
+			self._inicio = no
+		else:
+			ultimo = self._inicio
+
+		while ultimo.proximo:
+			ultimo = ultimo.proximo
+			ultimo.proximo = no
+		self._tamanho = self._tamanho + 1
